@@ -1,0 +1,4 @@
+flask
+BeautifulSoup
+Jinja2
+requests

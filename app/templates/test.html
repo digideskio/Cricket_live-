@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        ul, li {
+            list-style: none;
+        }
+        a{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .espni-livescores-scoreline div {
+            display: inline;
+            text-align: left;
+            line-height: 1.3em;
+            padding: 10px 0;
+        }
+
+        .espni-livescores-scoreline div .team-name {
+            font-family: BentonSansBold, Arial, sans-serif;
+        }
+        .tabs-content h3 {
+            padding: 10px 20px 10px 20px;
+            font-family: BentonSansMedium, Arial, sans-serif;
+            font-size: 0.84615em;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: #439ec9;
+            display: block;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+<section class="livescores module">
+    <div id="results" class="tabs-content">
+        <div id="livescores-full" class="tabs-wrapper slider-wrapper">
+            <div class="react-wrapper" id="react-liveScores">
+                <li class="international tournament-type-wrapper" data-reactid=".0.$International">
+                    <h3>Match Result<span class="icon-font icon-caret-down-solid"></span></h3>
+                    <ul class="scoreline-list" style="display: block;">
+                        {% for data in data %}
+                            <li class="espni-livescores-scoreline">
+                                <a href="/ci/engine/match/1005441.html" >
+                                    <div class="part-1">
+                                        <span class="team-name" >{{ data['title'] }}</span>
+                                    </div>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
